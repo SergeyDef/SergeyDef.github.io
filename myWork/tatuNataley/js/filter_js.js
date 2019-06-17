@@ -2,7 +2,7 @@
 
 const btn_info = document.getElementsByClassName('btn-info');
 const container = document.getElementById('Container');
-const container_li = document.getElementsByTagName('li');
+const container_li = container.getElementsByTagName('li');
 
 var a = "вам";
 

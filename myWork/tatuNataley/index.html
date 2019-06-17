@@ -10,7 +10,7 @@
   <title>Тату мастер Александра</title>
 
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-
+  <link rel="stylesheet" href="css/magnific-popup.css">
 
   <link rel="stylesheet" href="css/layout.css" type="text/css" />
 
@@ -28,8 +28,10 @@
   <script src="js/camera.min.js" type="text/javascript"></script>
 
   <script src="js/superfish.min.js" type="text/javascript"></script>
+
+  <script src="js/magnific-popup.js"></script>
     
-    <link rel="stylesheet" href="/js/getscript/getscript.css" type="text/css">
+  <link rel="stylesheet" href="/js/getscript/getscript.css" type="text/css">
 
 </head>
 <body class="com_content view-category task- itemid-101 body__">
@@ -214,7 +216,22 @@
                       <span class="item_title_part1">работ</span> 
                     </h3>
                   </header>
-                  <div class="mod-newsflash-adv mod-newsflash-adv__works cols-4" id="module_106">
+                  <script>
+                    // Тип Image - галерея картинок
+                    jQuery(document).ready(function($) {
+                     $('.popup-gallery').magnificPopup({
+                     delegate: 'a',
+                     type: 'image',
+                     tLoading: 'Загрузка изображения #%curr%...',
+                     gallery: {
+                         enabled: true,
+                         navigateByImgClick: true,
+                         preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                     }
+                     });
+                   });
+                  </script>
+                  <div class="mod-newsflash-adv mod-newsflash-adv__works cols-4 popup-gallery" id="module_106">
                     <div class="row-fluid">
                       <article class="span3 item item_num0 item__module" id="item_67">
                         <div class="box_item">
@@ -234,7 +251,7 @@
                         </div>
                         <div class="clearfix"></div>  
                       </article>
-                      <article class="span3 item item_num1 item__module  " id="item_68">
+                      <article class="span3 item item_num1 item__module popup-gallery" id="item_68">
                         <div class="box_item">
                           <!-- Intro Image -->
                           <figure class="item_img img-intro img-intro__none">
@@ -250,7 +267,8 @@
                             <!-- Read More link -->
                           </div>
                         </div>
-                        <div class="clearfix"></div>  </article>
+                        <div class="clearfix"></div>
+                      </article>
                         <article class="span3 item item_num2 item__module  " id="item_69">
                           <div class="box_item">
                             <!-- Intro Image -->
